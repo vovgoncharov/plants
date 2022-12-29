@@ -65,7 +65,7 @@ const getFilter = () => {
             }
             images.forEach((img) => {
                 let image = img.src.slice(33, 34);
-                console.log(image);
+                console.log(img.src);
                 if (btn.textContent === "Gargens") {
                     if (image !== "g") {
                         img.classList.add("filter");
