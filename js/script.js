@@ -39,7 +39,6 @@ const cities = [
     },
 ];
 
-
 const openPrice = () => {
     arrowPrice.forEach((arrow, i) => {
         arrowPrice[i].addEventListener("click", (e) => {
@@ -66,6 +65,7 @@ const getFilter = () => {
             }
             images.forEach((img) => {
                 let image = img.src.slice(33, 34);
+                console.log(image);
                 if (btn.textContent === "Gargens") {
                     if (image !== "g") {
                         img.classList.add("filter");
@@ -124,4 +124,3 @@ getFilter();
 getChoose();
 getOpen();
 openPrice();
-
