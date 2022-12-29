@@ -1,7 +1,31 @@
-$green:#499a18;
+$green: #499a18;
 $grey: #717171;
 $orange: #e06733;
 $dark-grey: #636060;
 $bg-section: #edf2ec;
 $links-nav: #010201;
 $main-text: #636060;
+
+.button {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border: 2px solid $orange;
+    border-radius: 10px;
+    padding: 9.5px 29px 10px 25px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: inset 160px 0 0 0 $orange;
+        color: #fff;
+    }
+}
+
+.title-h2 {
+    font-family: 'Inika';
+    font-style: normal;
+    font-size: 40px;
+    line-height: 52px;
+}
