@@ -64,25 +64,27 @@ const getFilter = () => {
                 e.currentTarget.classList.add("active");
             }
             images.forEach((img) => {
-                let images = img.src.slice(0, 34);
-                let image = images[images.length - 1];
-                console.log(image);
+                let images = img.src.slice(
+                    img.src.length - 15,
+                    img.src.length - 14
+                );
+                
                 if (btn.textContent === "Gargens") {
-                    if (image !== "g") {
+                    if (images !== "g") {
                         img.classList.add("filter");
-                    } else if (image === "g") {
+                    } else if (images === "g") {
                         img.classList.remove("filter");
                     }
                 } else if (btn.textContent === "Lawn") {
-                    if (image !== "l") {
+                    if (images !== "l") {
                         img.classList.add("filter");
-                    } else if (image === "l") {
+                    } else if (images === "l") {
                         img.classList.remove("filter");
                     }
                 } else if (btn.textContent === "Planting") {
-                    if (image !== "p") {
+                    if (images !== "p") {
                         img.classList.add("filter");
-                    } else if (image === "p") {
+                    } else if (images === "p") {
                         img.classList.remove("filter");
                     }
                 }
