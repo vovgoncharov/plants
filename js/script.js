@@ -1,5 +1,6 @@
 "use strict";
 const btn = document.querySelector(".contacts__select");
+const contacts = document.querySelector(".contacts")
 const btnContactWrap = document.querySelector(".contacts__select-block");
 const list = document.querySelector(".contacts__list");
 const arrowContacts = document.querySelector(".contacts__arrow");
@@ -68,7 +69,7 @@ const getFilter = () => {
                     img.src.length - 15,
                     img.src.length - 14
                 );
-                
+
                 if (btn.textContent === "Gargens") {
                     if (images !== "g") {
                         img.classList.add("filter");
@@ -119,6 +120,7 @@ const getChoose = () => {
                 <button class="contacts__btn">Call us</button>`;
             });
             contactsCity.classList.add("add-cities");
+            contacts.classList.add('contacts__bottom')
         });
     });
 };
@@ -127,3 +129,20 @@ getFilter();
 getChoose();
 getOpen();
 openPrice();
+
+//! Menu
+const menuHeader = document.querySelector(".header__menu");
+const close = document.querySelector(".header__menu-close");
+const open = document.querySelector(".header__menu-open");
+const headerList = document.querySelector(".header__list");
+
+menuHeader.addEventListener("click", () => {
+    open.classList.toggle("opacity-open");
+    headerList.classList.toggle("opacity-open");
+    close.classList.toggle("opacity-close");
+});
+
+// open.addEventListener("click", () => {
+//     open.classList.toggle("opacity");
+//     close.classList.toggle("opacity");
+// });

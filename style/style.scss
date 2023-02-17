@@ -48,6 +48,9 @@ body {
         }
     }
 
+    &__menu {
+        display: none;
+    }
 
     &__list {
         margin-top: 50px;
@@ -753,3 +756,5 @@ body {
         background-image: url(../assets/img/pinterest.svg);
     }
 }
+
+@import 'mobile';
